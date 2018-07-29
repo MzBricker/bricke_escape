@@ -40,7 +40,8 @@ libs/
 bin/
 obj/
 gen/
-assets/
+library/
+local/
 local.properties
 
 
