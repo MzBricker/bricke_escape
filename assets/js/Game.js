@@ -12,10 +12,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        startGameBtn:{
-            default:null,
-            type:cc.Button
-        }
         // foo: {
         //     // ATTRIBUTES:
         //     default: null,        // The default value will be used only when the component attaching
@@ -31,21 +27,19 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+        StartButton:{
+            default: null,
+            type: cc.Button
+        }
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-     onLoad () {
-        console.log(this.startGameBtn)
-     },
-
-     loadGame () {
-        console.log('loadGame')
-        cc.director.loadScene("Playground");
+    // onLoad () {},
+    startGame:function() {
+        cc.director.loadScene("game_content");
     },
-
     start () {
-
     },
 
     // update (dt) {},
