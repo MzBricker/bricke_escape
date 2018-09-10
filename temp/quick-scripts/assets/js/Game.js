@@ -1,8 +1,6 @@
-(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/js/game.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, '8b37fdieKpHV55qbBFsyLnR', 'game', __filename);
-// js/game.js
-
-"use strict";
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/js/Game.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '90f887PTLtA2rQqgh1yyB9+', 'Game', __filename);
+// js/Game.ts
 
 // Learn cc.Class:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
@@ -13,10 +11,8 @@ cc._RF.push(module, '8b37fdieKpHV55qbBFsyLnR', 'game', __filename);
 // Learn life-cycle callbacks:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
-
     properties: {
         // foo: {
         //     // ATTRIBUTES:
@@ -38,18 +34,14 @@ cc.Class({
             type: cc.Button
         }
     },
-
     // LIFE-CYCLE CALLBACKS:
-
     // onLoad () {},
-    startGame: function startGame() {
+    startGame: function () {
         cc.director.loadScene("game_content");
     },
-    start: function start() {}
-}
-
-// update (dt) {},
-);
+    start: function () {
+    },
+});
 
 cc._RF.pop();
         }
@@ -62,5 +54,5 @@ cc._RF.pop();
             });
         }
         })();
-        //# sourceMappingURL=game.js.map
+        //# sourceMappingURL=Game.js.map
         

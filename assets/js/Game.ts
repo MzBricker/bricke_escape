@@ -36,11 +36,13 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {},
-    startGame:function() {
+    startGame() {
         cc.director.loadScene("game_content");
     },
+
     start () {
     },
 
     // update (dt) {},
 });
+

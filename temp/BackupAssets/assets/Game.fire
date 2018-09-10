@@ -41,8 +41,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.20601851851851852,
-      "y": 0.20601851851851852,
+      "x": 0.2361111111111111,
+      "y": 0.2361111111111111,
       "z": 1
     },
     "_quat": {
@@ -52,7 +52,7 @@
       "z": 0,
       "w": 1
     },
-    "_localZOrder": 107,
+    "_localZOrder": 53,
     "groupIndex": 0,
     "autoReleaseAssets": false,
     "_id": "b46e937b-db3d-4360-a1d6-6c2377e3dcfb"
@@ -124,7 +124,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 108,
+    "_localZOrder": 54,
     "groupIndex": 0,
     "_id": "364PZo3AhHyKc6m6ZtQPA3"
   },
@@ -185,7 +185,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 109,
+    "_localZOrder": 55,
     "groupIndex": 0,
     "_id": "b2Ttkvl71CPaiB58a3Nzir"
   },
@@ -272,7 +272,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 110,
+    "_localZOrder": 56,
     "groupIndex": 0,
     "_id": "01PjUjDj1NtKl81DkvxDhl"
   },
@@ -343,7 +343,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 111,
+    "_localZOrder": 57,
     "groupIndex": 0,
     "_id": "0dSPwkqjRD56P1PaF6w0AL"
   },
@@ -404,7 +404,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 112,
+    "_localZOrder": 58,
     "groupIndex": 0,
     "_id": "1ffZ9AeRNNl4BBGEhCWabS"
   },
@@ -535,7 +535,7 @@
     "target": {
       "__id__": 2
     },
-    "component": "game",
+    "component": "Game",
     "handler": "startGame",
     "customEventData": ""
   },
@@ -612,16 +612,14 @@
     "_id": "acNjaeAhBLPafrJlCxu1Ni"
   },
   {
-    "__type__": "8b37fdieKpHV55qbBFsyLnR",
+    "__type__": "90f887PTLtA2rQqgh1yyB9+",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "StartButton": {
-      "__id__": 10
-    },
-    "_id": "d9+BjJ0PhDQ4+IRTI7Jfzi"
+    "StartButton": null,
+    "_id": "2ct/kqG1FEnr4Cif4YTTLM"
   }
 ]
