@@ -41,6 +41,25 @@ export default class NewClass extends cc.Component {
             console.log('right Mouse down');
             this.onRightClick();
         }, this);
+
+        this.setTouchScreenEvent();
+
+
+    }
+
+    setTouchScreenEvent(){
+        this.left.on(cc.Node.EventType.TOUCH_START, function (event) {
+            console.log('Left Mouse down');
+            this.onLeftClick();
+          }, this);
+        this.middle.on(cc.Node.EventType.TOUCH_START, function (event) {
+            console.log('Middle Mouse down');
+            this.onMiddleClick();
+          }, this);
+        this.right.on(cc.Node.EventType.TOUCH_START, function (event) {
+            console.log('right Mouse down');
+            this.onRightClick();
+        }, this);
     }
 
     onLeftClick(){
