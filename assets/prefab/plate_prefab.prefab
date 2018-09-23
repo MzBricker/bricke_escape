@@ -21,10 +21,22 @@
     "_components": [
       {
         "__id__": 2
+      },
+      {
+        "__id__": 3
+      },
+      {
+        "__id__": 4
+      },
+      {
+        "__id__": 5
+      },
+      {
+        "__id__": 6
       }
     ],
     "_prefab": {
-      "__id__": 3
+      "__id__": 7
     },
     "_opacity": 255,
     "_color": {
@@ -67,8 +79,8 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 13,
-    "groupIndex": 0,
+    "_localZOrder": 249,
+    "groupIndex": 1,
     "_id": ""
   },
   {
@@ -97,7 +109,88 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "edTwSjx4ZAJYpm1Xjp+QKY"
+    "_id": "1enI9ek6FEKZc18TnD1B7+"
+  },
+  {
+    "__type__": "cc.RigidBody",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_type": 2,
+    "_allowSleep": false,
+    "_gravityScale": 0,
+    "_linearDamping": 0,
+    "_angularDamping": 0,
+    "_linearVelocity": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": -1400
+    },
+    "_angularVelocity": 0,
+    "_fixedRotation": false,
+    "enabledContactListener": true,
+    "bullet": false,
+    "_id": "e8LbY4oOtPoaa0VcVCvOFw"
+  },
+  {
+    "__type__": "cc.PhysicsBoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_density": 1,
+    "_sensor": false,
+    "_friction": 0.2,
+    "_restitution": 0,
+    "body": null,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 100
+    },
+    "_id": "942BgrjMtB7rXo+BqyqCJM"
+  },
+  {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "tag": 0,
+    "_offset": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_size": {
+      "__type__": "cc.Size",
+      "width": 200,
+      "height": 100
+    },
+    "_id": "0bG5yQfrNIwIhWlMTlhG5J"
+  },
+  {
+    "__type__": "08831AIFztGk5eqtMe6olSL",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "_id": "396mG5SUJGybNAjSIUN4p+"
   },
   {
     "__type__": "cc.PrefabInfo",

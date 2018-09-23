@@ -17,22 +17,38 @@ export default class NewClass extends cc.Component {
     @property(cc.Prefab)
     platePrefab:cc.Prefab;
 
+    @property(cc.Node)
+    rubbishStation:cc.Node;
+
     // onLoad () {}
-    
-    @property
-    speed :Number= 0;
+
 
     enemyPool:cc.NodePool;
 
 
     onLoad(){
         this.initParam();
+        //开启物理系统
+                cc.director.getPhysicsManager().enabled = true;
+                //打开物理系统调试信息
+                cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+                cc.PhysicsManager.DrawBits.e_pairBit |
+                cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+                cc.PhysicsManager.DrawBits.e_jointBit |
+                cc.PhysicsManager.DrawBits.e_shapeBit
+        //获取碰撞系统管理器
+                var manager = cc.director.getCollisionManager();
+                manager.enabled = true;
+                manager.enabledDebugDraw = true;
+                manager.enabledDrawBoundingBox = true;
         this.enemyPool = new cc.NodePool();
         let initCount = 10;
         for (let i = 0; i < initCount; ++i) {
             let enemy = cc.instantiate(this.platePrefab); // 创建节点
             this.enemyPool.put(enemy); // 通过 putInPool 接口放入对象池
         }
+        console.log('Box Area onLoad');
+        this.rubbishStation.getComponent("RubbishStation").init(this.enemyPool);
     }
 
     initParam () {
@@ -59,15 +75,15 @@ export default class NewClass extends cc.Component {
                 enemy.parent = this.node; // 将生成的敌人加入节点树
                 enemy.setPosition(this.getRandomPosition(),this.node.height);  
 
-                let finished  = cc.callFunc(function(target, enemy) {
-                    this.enemyPool.put(enemy);
-                }, this, enemy);
+                // let finished  = cc.callFunc(function(target, enemy) {
+                //     this.enemyPool.put(enemy);
+                // }, this, enemy);
 
-                var action = cc.moveTo(1, cc.v2(enemy.x,0));
-                var newAction = cc.speed(action, 1);
-                var myAction = cc.sequence(action, finished);
-                enemy.runAction(myAction);
-            }, 1);
+                // var action = cc.moveTo(1, cc.v2(enemy.x,0));
+                // var newAction = cc.speed(action, 1);
+                // var myAction = cc.sequence(action, finished);
+                // enemy.runAction(myAction);
+            }, 0.5);
     
     }
 
