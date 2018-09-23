@@ -8,7 +8,7 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 const {ccclass, property} = cc._decorator;
-
+import {GAME_GLOBAL_PARM} from "./ConstValue";
 @ccclass
 export default class NewClass extends cc.Component {
 
@@ -18,14 +18,6 @@ export default class NewClass extends cc.Component {
     platePrefab:cc.Prefab;
 
     // onLoad () {}
-    @property
-    leftX:Number = 0;
-
-    @property
-    middleX: Number = 0;
-
-    @property
-    rightX: Number = 0;
     
     @property
     speed :Number= 0;
@@ -34,6 +26,7 @@ export default class NewClass extends cc.Component {
 
 
     onLoad(){
+        this.initParam();
         this.enemyPool = new cc.NodePool();
         let initCount = 10;
         for (let i = 0; i < initCount; ++i) {
@@ -42,6 +35,13 @@ export default class NewClass extends cc.Component {
         }
     }
 
+    initParam () {
+        GAME_GLOBAL_PARM.cellWidth = this.node.width / 3 ;
+        GAME_GLOBAL_PARM.cellHeight = this.node.height; 
+        GAME_GLOBAL_PARM.left = GAME_GLOBAL_PARM.cellWidth / 2  ;
+        GAME_GLOBAL_PARM.middle = 3 * GAME_GLOBAL_PARM.cellWidth / 2;
+        GAME_GLOBAL_PARM.right = 5 * GAME_GLOBAL_PARM.cellWidth / 2; 
+    }
 
     start () {
         this.createBox();
@@ -72,7 +72,7 @@ export default class NewClass extends cc.Component {
     }
 
     getRandomPosition() {
-        let position = [ this.leftX,this.middleX,this.rightX];
+        let position = [GAME_GLOBAL_PARM.left, GAME_GLOBAL_PARM.middle, GAME_GLOBAL_PARM.right];
         let randomPosition = Math.floor(Math.random() * 3); 
         return position[randomPosition];
     }
