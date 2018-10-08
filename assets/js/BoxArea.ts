@@ -31,16 +31,16 @@ export default class NewClass extends cc.Component {
         //开启物理系统
                 cc.director.getPhysicsManager().enabled = true;
                 //打开物理系统调试信息
-                cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-                cc.PhysicsManager.DrawBits.e_pairBit |
-                cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-                cc.PhysicsManager.DrawBits.e_jointBit |
-                cc.PhysicsManager.DrawBits.e_shapeBit
+                // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+                // cc.PhysicsManager.DrawBits.e_pairBit |
+                // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+                // cc.PhysicsManager.DrawBits.e_jointBit |
+                // cc.PhysicsManager.DrawBits.e_shapeBit
         //获取碰撞系统管理器
                 var manager = cc.director.getCollisionManager();
                 manager.enabled = true;
-                manager.enabledDebugDraw = true;
-                manager.enabledDrawBoundingBox = true;
+                manager.enabledDebugDraw = false;
+                manager.enabledDrawBoundingBox = false;
         this.enemyPool = new cc.NodePool();
         let initCount = 10;
         for (let i = 0; i < initCount; ++i) {

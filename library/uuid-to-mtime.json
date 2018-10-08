@@ -40,8 +40,8 @@
     "relativePath": "resource"
   },
   "b46e937b-db3d-4360-a1d6-6c2377e3dcfb": {
-    "asset": 1537691488520,
-    "meta": 1537691606543,
+    "asset": 1539007947799,
+    "meta": 1539007947804,
     "relativePath": "Game.fire"
   },
   "345a8de8-8944-4774-98fa-29eee068b795": {
@@ -309,11 +309,6 @@
     "meta": 1537691606442,
     "relativePath": "game_content.fire"
   },
-  "8a1347c2-f87a-46b3-9ec0-cdb4ea9585ac": {
-    "asset": 1537691488522,
-    "meta": 1537691606742,
-    "relativePath": "js/Control.ts"
-  },
   "0dda5968-11db-4d15-9be9-9344e2db59b4": {
     "asset": 1537691488521,
     "meta": 1537691606702,
@@ -322,26 +317,31 @@
   "90f88ecf-4cbb-40da-b42a-821d72c81f7e": {
     "asset": 1537691574094,
     "meta": 1537691606668,
-    "relativePath": "Game.ts"
-  },
-  "08831008-173b-4693-97aa-b4c7baa2548b": {
-    "asset": 1537691574097,
-    "meta": 1537691606777,
-    "relativePath": "js/Star.ts"
+    "relativePath": "js/Game.ts"
   },
   "2af821ab-0714-4f5c-81b8-b31fc520b345": {
     "asset": 1537691574096,
     "meta": 1537691606776,
     "relativePath": "js/RubbishStation.ts"
   },
-  "24440f02-48d9-4cb4-b351-40fe87873507": {
-    "asset": 1537691574096,
-    "meta": 1537691606677,
-    "relativePath": "js/BoxArea.ts"
-  },
   "3281631c-dba6-4d71-96a0-812f3a86f4d3": {
     "asset": 1537691574096,
     "meta": 1537691606756,
     "relativePath": "js/Role.ts"
+  },
+  "8a1347c2-f87a-46b3-9ec0-cdb4ea9585ac": {
+    "asset": 1539007804424,
+    "meta": 1539007807227,
+    "relativePath": "js/Control.ts"
+  },
+  "24440f02-48d9-4cb4-b351-40fe87873507": {
+    "asset": 1539007968000,
+    "meta": 1539008002415,
+    "relativePath": "js/BoxArea.ts"
+  },
+  "08831008-173b-4693-97aa-b4c7baa2548b": {
+    "asset": 1539008001545,
+    "meta": 1539008002415,
+    "relativePath": "js/Star.ts"
   }
 }

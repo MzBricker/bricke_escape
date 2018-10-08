@@ -24,42 +24,64 @@ export default class NewClass extends cc.Component {
     middle:cc.Node; 
     right:cc.Node; 
     roleScript:cc.Component;
+    leftEvent = function (event) {
+        console.log('Left down');
+        this.onLeftClick();
+      };
+      middleEvent = function (event) {
+        console.log('Middle down');
+        this.onMiddleClick();
+      };
+      rightEvent = function (event) {
+        console.log('right down');
+        this.onRightClick();
+      };
     start () {
         this.roleScript = this.role.getComponent("Role");
         this.left = this.node.getChildByName("left");
         this.middle = this.node.getChildByName("middle");
         this.right = this.node.getChildByName("right");
-        this.left.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-            console.log('Left Mouse down');
-            this.onLeftClick();
-          }, this);
-        this.middle.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-            console.log('Middle Mouse down');
-            this.onMiddleClick();
-          }, this);
-        this.right.on(cc.Node.EventType.MOUSE_DOWN, function (event) {
-            console.log('right Mouse down');
-            this.onRightClick();
-        }, this);
+    
 
+
+        this.setMouseEvent();
         this.setTouchScreenEvent();
-
+        this.setKeyBoardEvent();
 
     }
 
+    setMouseEvent(){
+        this.left.on(cc.Node.EventType.MOUSE_DOWN, this.leftEvent, this);
+        this.middle.on(cc.Node.EventType.MOUSE_DOWN, this.middleEvent, this);
+        this.right.on(cc.Node.EventType.MOUSE_DOWN, this.rightEvent, this);
+    }
+
     setTouchScreenEvent(){
-        this.left.on(cc.Node.EventType.TOUCH_START, function (event) {
-            console.log('Left Mouse down');
-            this.onLeftClick();
-          }, this);
-        this.middle.on(cc.Node.EventType.TOUCH_START, function (event) {
-            console.log('Middle Mouse down');
-            this.onMiddleClick();
-          }, this);
-        this.right.on(cc.Node.EventType.TOUCH_START, function (event) {
-            console.log('right Mouse down');
-            this.onRightClick();
-        }, this);
+        this.left.on(cc.Node.EventType.TOUCH_START, this.leftEvent, this);
+        this.middle.on(cc.Node.EventType.TOUCH_START, this.middleEvent, this);
+        this.right.on(cc.Node.EventType.TOUCH_START, this.rightEvent, this);
+    }
+
+    setKeyBoardEvent(){
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+    
+    }
+
+    onKeyDown (event) {
+        switch(event.keyCode) {
+            case cc.KEY.left:
+                console.log('left key down');
+                this.onLeftClick();
+                break;
+            case cc.KEY.space:
+                console.log('space key down');
+                this.onMiddleClick();
+                break;
+            case cc.KEY.right:
+                console.log('right key down')
+                this.onRightClick();
+                break;
+        }
     }
 
     onLeftClick(){

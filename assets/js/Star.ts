@@ -17,19 +17,7 @@ export default class Star extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
 
      onLoad () {
-        //开启物理系统
-        cc.director.getPhysicsManager().enabled = true;
-        //打开物理系统调试信息
-        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        cc.PhysicsManager.DrawBits.e_pairBit |
-        cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        cc.PhysicsManager.DrawBits.e_jointBit |
-        cc.PhysicsManager.DrawBits.e_shapeBit
-//获取碰撞系统管理器
-        var manager = cc.director.getCollisionManager();
-        manager.enabled = true;
-        manager.enabledDebugDraw = true;
-        manager.enabledDrawBoundingBox = true;
+       
 
      }
         // 只在两个碰撞体开始接触时被调用一次
