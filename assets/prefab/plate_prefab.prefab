@@ -49,7 +49,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 200,
-      "height": 100
+      "height": 30
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -59,7 +59,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": 19,
       "z": 0
     },
     "_scale": {
@@ -79,7 +79,7 @@
     },
     "_skewX": 0,
     "_skewY": 0,
-    "_localZOrder": 249,
+    "_localZOrder": 201,
     "groupIndex": 1,
     "_id": ""
   },
@@ -94,9 +94,9 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "8f8ba54f-70f6-4ca1-86d9-dddbd85e769d"
+      "__uuid__": "393b7ca2-f696-4334-8324-a2c94e43a671"
     },
-    "_type": 0,
+    "_type": 1,
     "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
@@ -109,7 +109,7 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "1enI9ek6FEKZc18TnD1B7+"
+    "_id": "fdgzypKENMNIG3Tt4QIoF5"
   },
   {
     "__type__": "cc.RigidBody",
@@ -127,13 +127,13 @@
     "_linearVelocity": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": -1400
+      "y": -2000
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
     "enabledContactListener": true,
     "bullet": false,
-    "_id": "e8LbY4oOtPoaa0VcVCvOFw"
+    "_id": "16q/Gkg6RAG5VGF7GMpbZI"
   },
   {
     "__type__": "cc.PhysicsBoxCollider",
@@ -152,14 +152,14 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": 0,
-      "y": 0
+      "y": -10
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 100
+      "width": 180,
+      "height": 10
     },
-    "_id": "942BgrjMtB7rXo+BqyqCJM"
+    "_id": "77DMMtnj9Dza1FS39YBnzk"
   },
   {
     "__type__": "cc.BoxCollider",
@@ -177,10 +177,10 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 200,
-      "height": 100
+      "width": 180,
+      "height": 10
     },
-    "_id": "0bG5yQfrNIwIhWlMTlhG5J"
+    "_id": "26qwJuFhRFW5gNqFjjJ22H"
   },
   {
     "__type__": "08831AIFztGk5eqtMe6olSL",
@@ -190,7 +190,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "_id": "396mG5SUJGybNAjSIUN4p+"
+    "_id": "1fuBOe54hH0bkYKpzlGsRx"
   },
   {
     "__type__": "cc.PrefabInfo",

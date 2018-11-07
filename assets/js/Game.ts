@@ -27,6 +27,7 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+
         StartButton:{
             default: null,
             type: cc.Button
@@ -35,9 +36,7 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-
-        ;
+    onLoad () {;
     },
     startGame() {
         cc.director.loadScene("game_content");

@@ -20,8 +20,12 @@ export default class NewClass extends cc.Component {
     @property(cc.Node)
     rubbishStation:cc.Node;
 
+    @property(cc.Label)
+    timeLabel:cc.Label;
     // onLoad () {}
 
+    @property
+    brickTimeSpace :number = 0;
 
     enemyPool:cc.NodePool;
 
@@ -61,6 +65,11 @@ export default class NewClass extends cc.Component {
 
     start () {
         this.createBox();
+        var time = 0.0;
+        this.schedule(function() {
+            time = time + 0.01;
+            this.timeLabel.string = time.toFixed(2) +"s"; 
+        },0.01)
     }
 
     createBox(){
@@ -83,7 +92,7 @@ export default class NewClass extends cc.Component {
                 // var newAction = cc.speed(action, 1);
                 // var myAction = cc.sequence(action, finished);
                 // enemy.runAction(myAction);
-            }, 0.5);
+            },this.brickTimeSpace);
     
     }
 
